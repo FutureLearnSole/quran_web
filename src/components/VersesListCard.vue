@@ -68,8 +68,10 @@ onMounted(() => {
     class="box-border w-full bg-white p-4 shadow-md rounded-lg shadow-gray-200/50"
     v-for="(verse, index) in props.surahs.verses"
     :key="index"
-    :id="`verse-${index + 1}`"
-  >
+    :id="`verse-${index + 1}`" style=" 
++        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
++    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);		" 		
++  ><!-- https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow#%E4%BE%8B -->
     <div class="flex justify-between w-full items-center mb-5">
       <svg
         class="text-emerald-600 transition duration-300"
